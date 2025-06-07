@@ -44,7 +44,7 @@ public class EmployeeController {
     }
 
    
-@GetMapping()
+    @GetMapping()
     public List<EmployeeNameIdDTO> getEmployeeNamesAndIds(@RequestParam Boolean lookup) {
         return employeeService.getEmployeeNameAndIdList(lookup);
     } 
