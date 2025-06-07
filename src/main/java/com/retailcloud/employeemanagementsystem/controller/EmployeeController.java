@@ -43,8 +43,11 @@ public class EmployeeController {
         return employeeService.updateEmployeeDepartment(id, departmentId);
     }
 
-   
-    @GetMapping()
+      @GetMapping
+    public Page<EmployeeDTO> getAllEmployees(@RequestParam(defaultValue = "0") int page) {
+        return employeeService.getAllEmployees(PageRequest.of(page, 20));
+    }
+    @GetMapping("/lookup")
     public List<EmployeeNameIdDTO> getEmployeeNamesAndIds(@RequestParam Boolean lookup) {
         return employeeService.getEmployeeNameAndIdList(lookup);
     } 
