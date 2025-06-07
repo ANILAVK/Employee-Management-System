@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "creationDate": { "type": "string", "format": "date" },
+    "departmentHeadId": { "type": "integer" }
+  },
+  "required": ["name", "creationDate", "departmentHeadId"]
+}
